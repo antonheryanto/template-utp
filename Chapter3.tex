@@ -1,0 +1,61 @@
+%Chapter 3
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%\pagestyle{plain}\cleardoublepage %To Add empty page and start on odd number (SOFTBOUND)%%
+\chapter{Methodology}
+\label{ch3}
+\section{Introduction}
+As a prior work, the delay behavior of paths affected by ROFs  with respect to $V_{DD}$ has been investigated. The experimental results showed that up to 3 resistance ranges per fault location and test pattern can exhibit different faulty behaviors. Additionally, the ROF detectability with respect to $V_{DD}$ in multiple $V_{DD}$ environments for different fault locations and test patterns was investigated. The experimental results showed that the detectability with respect to $V_{DD}$ varies across test patterns, designs and technologies. This means that each ROF could have a different detectable resistance range coverage with $V_{DD}$ and this implies a difference in the resistance detection threshold at each $V_{DD}$. \par
+In this section, the experimental setup and results will be discussed, followed by an experiment on an inverter chain design.
+\section{Prior Work}
+\label{sec_ResIntnResDetThr}
+
+As a prior work, the delay behavior of paths affected by ROFs  with respect to $V_{DD}$ has been investigated. The experimental results showed that up to 3 resistance ranges per fault location and test pattern can exhibit different faulty behaviors. Additionally, the ROF detectability with respect to $V_{DD}$ in multiple $V_{DD}$ environments for different fault locations and test patterns was investigated. The experimental results showed that the detectability with respect to $V_{DD}$ varies across test patterns, designs and technologies. This means that each ROF could have a different detectable resistance range coverage with $V_{DD}$ and this implies a difference in the resistance detection threshold at each $V_{DD}$. \par
+In this section, the experimental setup and results will be discussed, followed by an experiment on an inverter chain design.
+
+\subsection{Experiments}
+\label{JP2_subsec_BenchmarkExp}
+
+
+Experiments on benchmark circuits~\cite{F.Brglez-85,F.Brglez-89,F.corno-00} were performed to determine the identifiable number of behaviors per fault for each circuit. The list of benchmark circuits used is shown in Table~\ref{tb:iscas85}Additionally, the average detectable resistance range per $V_{DD}$ for a large number of fault locations was computed for each circuit. Spice-level simulations were used. The delays of faulty paths were calculated at the different $V_{DD}$ values. If two ROFs at the same $V_{DD}$  had the largest delay value, then they were grouped. 
+
+
+\begin{table}[hbtp]
+\centering
+\caption{Benchmark circuit characteristics used in the experiments}
+\label{tb:iscas85}
+\begin{tabular}{|c||c|c|c|c|} \hline
+Circuit & Circuit & Total & Input & Output  \\
+Name    & Function & Gates & Lines & Lines \\ \hline
+        &          &       &      &         \\
+C17	& N/A & 5 & 5   & 7       \\
+        &          &       &      &         \\
+S27	& N/A & 10 (3 flip-flops) & 4   & 1       \\
+        &          &       &      &         \\
+B01	& Finite State Machine & 49 (5 flip-flops) & 2   & 2       \\
+        &          &       &      &         \\
+C432	& Priority Decoder & 160 (18 EXOR)  & 36   & 7       \\
+        &          &       &      &         \\
+C499$^1$ & ECAT     & 202 (104 EXOR) & 41   & 32     \\
+        &          &       &      &         \\
+C880    & ALU and Control  & 383   & 60   & 26      \\
+        &          &       &      &         \\
+C1355$^1$ & ECAT     & 546   & 41   & 32      \\
+        &          &       &      &         \\
+C1908   & ECAT     & 880   & 33   & 25      \\
+        &          &       &      &        \\
+\hline
+\end{tabular}
+
+\raggedright 
+\hspace{0.8in}
+\parbox{4.8in}{  
+$^1$Circuits C499 and C1355 are functionally equivalent.
+All EXOR gates of C499 have been expanded into their
+4-NAND gate equivalents in C1355. \cite{M.Pedram-02}
+}
+
+\end{table}
+%-----------------------------------------------%-----------------------------------------------
+

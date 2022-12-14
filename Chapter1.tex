@@ -1,0 +1,58 @@
+%Chapter 1
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%\pagestyle{plain}\cleardoublepage %To Add empty page and start on odd number (SOFTBOUND)%%
+\chapter{Introduction}
+\label{ch1}
+\section{Multi Voltage Digital Designs}
+
+Digital designs play an important role in the control and interface of most of our everyday devices including: house equipments, personal electronic devices, automobiles, factories manufacturing process control, public facilities, etc. With the increasing demands for low power devices especially for battery powered devices, several low power design techniques have been exploited, mainly utilizing multiple supply voltage levels~\cite{M.Pedram-02}. \par
+
+A block diagram showing the operating concept of dynamic voltage scaling is shown in Fig.~\ref{fig:VoltageScaling}. As can be seen in the figure, the energy unit can adjust the voltage level of the processor ($V_{avs}$) according to desired power requested by the processor ($P_i$).\par
+
+% Example of figure
+\begin{figure}
+	\centering
+		\includegraphics[width=\linewidth]{VoltageScaling}
+		\caption[Voltage scaling in a low power design(Appears in TOC ONLY)]{Voltage scaling in a low power design~\cite{S.Khursheed-10Thesis}(Appears inside the chapters)}
+	\label{fig:VoltageScaling}
+\end{figure}
+	
+% Example of table
+\begin{table}[htbp]
+  \centering
+  \caption{The Caption of the Table}
+    \begin{tabular}{crrrrr}
+    \textbf{Ckt} & \multicolumn{1}{c}{\textbf{dec}} & \multicolumn{1}{c}{\textbf{inc}} & \multicolumn{1}{c}{\textbf{mid-bump}} & \multicolumn{1}{c}{\textbf{mid-bump-inv}} & \multicolumn{1}{c}{\textbf{$\frac{\#Intervals}{\#ROF}$}} \\
+    \textbf{c17} & 71.21\% & 19.90\% & 8.90\% & 0.00\% & 3.22 \\
+    \textbf{s27} & 86.97\% & 7.44\% & 5.40\% & 0.19\% & 4.64 \\
+    \textbf{b01} & 75.81\% & 14.75\% & 9.02\% & 0.42\% & 3.65 \\
+    \textbf{c432} & 85.62\% & 5.32\% & 9.06\% & 0.00\% & 2.85 \\
+    \textbf{c499} & 68.28\% & 23.92\% & 7.80\% & 0.00\% & 2.58 \\
+    \textbf{c880} & 67.46\% & 17.72\% & 14.82\% & 0.00\% & 2.97 \\
+    \textbf{c1355} & 65.39\% & 19.07\% & 15.52\% & 0.03\% & 3.00 \\
+    \textbf{c1908} & 71.91\% & 14.99\% & 13.08\% & 0.02\% & 2.99 \\
+    \textbf{} &       &       &       &       &  \\
+    \textbf{Avg} & 74.08\% & 15.39\% & 10.45\% & 0.08\% & 3.24 \\
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+
+
+\section{Research Focus, Objective and Scope}
+The scope of this research is on modeling and testing of resistive open faults in CMOS digital designs  with multiple supply voltages considering state-of-the-art delay testing methodologies. More specifically, this research has the following aims:
+\begin{itemize}
+	\item To identify the required parameters to model the behavior and detectability of resistive open faults in multi-voltage operating environment. Knowing the fault behavior helps in fault diagnosis utilizing multiple supply voltages. Specifically, to determine the test patterns and $V_{DD}$ which excite a particular faulty behavior. On the other hand, knowing the fault detectability helps in selecting the optimum test patterns and the corresponding $V_{DD}$.
+	
+	\item To develop multi-voltage test generation method. This is done by providing an optimum voltage selection for each test pattern exploiting the proposed model. The aim of the proposed method is to determine the test set pair ($V_{DD}$ and test pattern) for each fault in at-speed and faster-than-at-speed testing. The benefit of the algorithm is to effectively reduce test costs and escapes.
+\end{itemize}
+
+\section{Thesis Contribution}
+The work presented in this thesis helps in effectively reducing test costs and escapes in testing multi-$V_{DD}$ designs for resistive open faults by providing minimum test set and 100\% fault coverage. Additionally, by exploiting the voltage aware model it is envisaged that the accuracy and resolution of distinguishing and diagnosis of resistive open faults would be enhanced. The research work in this thesis has been presented in the formal proceedings of the following conferences and journal articles:
+\begin{itemize}
+	\item M. T. Mohammadat, N. B. Z. Ali, F. A. Hussin; \textbf{``Detectability Analysis of Resistive Open Faults with Dynamic Voltage Scaling Awareness''}, Asia Symposium in Quality Electronic Design, pp.184-190, 19-20 July 2011
+	\item M. T. Mohammadat, N. B. Z. Ali, F. A. Hussin; \textbf{``Propagation of Delay Faults Caused by Resistive Open in Dynamic Voltage Scaling Environment''}, National Postgraduate Conference, pp.1-6, 19-20 Sept. 2011
+	\item M. T. Mohammadat, N. B. Z. Ali, F. A. Hussin; \textbf{``Voltage Aware Characterization and Modeling of Resistive Open Faults''}, 17th IEEE European Test Symposium, pp.1-6, 28-31 May 2012
+\end{itemize}
+%-----------------------------------------------%-----------------------------------------------

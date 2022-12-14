@@ -1,0 +1,135 @@
+% This is an alpha version of the thesis template (unofficial)
+% Template first version by Dr. Fawnizu Azmadi Hussin (fawnizu@petronas.com.my)
+% Updated by Azman Latif, d.azman.abdul.latif@intel.com, May 2012
+% Updated byTaj, mohamed.t.m.elhussein@ieee.org, Aug 2012
+% Updated by Hassan, Sabo Miya and Kishore Bingi hsmiya2010@gmail.com, March 2018
+% Approved by Assoc. Prof. Ir. Dr. Rosdiazli Bin Ibrahim rosdiazli@utp.deu.my
+\documentclass[a4paper,12pt,twoside]{report}
+\usepackage{utpthesis-2e} %<- Contains all formatting stuff!
+
+\setcounter{tocdepth}{6}
+\brokenpenalty=10000
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+%\bibliographystyle{agsm}
+%\usepackage[style=authoryear]{biblatex}
+%\bibliography{QC}
+%%%%%%%%%%%%%%%%%%%%Packages to enhance the text
+\hyphenation{op-tical net-works semi-conduc-tor}
+%\usepackage{physics}
+\usepackage{forest}
+\usepackage{natbib}
+\usepackage{dsfont}
+%\usepackage{bbm}
+%\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{trees,positioning}
+\usepackage{circuitikz}
+\usetikzlibrary{circuits.logic.US}
+\usepackage[braket, qm]{qcircuit}
+%\usepackage{cite}
+\usepackage{colortbl}
+\usepackage{algpseudocode,algorithm}
+%\usepackage{amsmath}
+%\usepackage{amstext}
+\usepackage[cmex10]{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\renewcommand{\arraystretch}{1.5}
+\usepackage{wasysym}
+%\usepackage[pdftex]{graphicx}
+\usepackage{calc}
+\usepackage{stfloats}
+\usepackage{float}
+\usepackage{array}
+\usepackage{physics}
+%\usepackage{fixltx2e}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage[pdftitle={Thesis Title},pdfauthor={PG Student},colorlinks=false,pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=false,
+bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
+colorlinks,linkcolor={black},citecolor={black},urlcolor={black},
+pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%below for all k-maps
+
+\renewcommand{\cfttabfont}{Table } % Do not change,
+\renewcommand{\cftfigfont}{Figure } % Do not change
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\raggedbottom 
+\title{Thesis Title}
+\author{Student Name}
+\dept{x \& y Department}
+\hod{Current HOD name}  % name of the current head of department
+\degree{Master of Science} % or \degree{Doctor of Philosophy}
+\mainsupervisor{Supervisor's name}
+\cosupervisora{Co-Supervisor's name}
+\submitdate{\ifcase\the\month\or
+	JANUARY\or FEBRUARY\or MARCH\or APRIL\or MAY\or JUNE\or
+	JULY\or AUGUST\or SEPTEMBER\or OCTOBER\or NOVEMBER\or DECEMBER\fi
+	\space \number\the\year} % or \submitdate{Month 20xx}
+\copyrightyear{\number\the\year} % or \copyrightyear{20xx}
+\authoraddress{House No. xx,Street xx,\\\hline City, Postal Code,\\\hline State, Country\\\hline}
+
+\beforepreface %dont change this
+
+
+%-----------------------------------------------
+\clearpage
+
+\input{Dedication.tex}
+\input{Acknowledgements.tex}
+\input{AbstractEnglish.tex}
+\input{AbstractMalay.tex}
+
+\clearpage
+%-----------------------------------------------
+
+\newpage
+\thesiscopyrightpage %PLACING COPYRIGHT PAGE AFTER ABSTRAK (According to Aug 2012)
+\afterpreface  %don't change this
+
+\input{Chapter1.tex}
+\input{Chapter2.tex}
+\input{Chapter3.tex}
+\input{Chapter4.tex}
+\input{Chapter5.tex}
+
+\clearpage
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\addcontentsline{toc}{chapter}{REFERENCES}\label{ref}
+\bibliographystyle{unsrt}
+%\bibliographystyle{IEEEtran}
+\bibliography{Ref}
+\clearpage
+%Appendices
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+%\pagestyle{plain}\cleardoublepage %To Add empty page and start on odd number (SOFTBOUND)%%
+\appendix
+%The following 2 lines add the word appendices to toc and prevent appendix chapters from appearing
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\addcontentsline{toc}{chapter}{APPENDICES} \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+%Here is how we add chapters
+\chapter{This is my first appendix}
+\chapter{This is my second appendix}
+%-----------------------------------------------%-----------------------------------------------
+
+
+%References
+%-----------------------------------------------
+%-----------------------------------------------
+%-----------------------------------------------
+
+\end{document}
